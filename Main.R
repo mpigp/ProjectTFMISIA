@@ -121,7 +121,7 @@ plot(history)
 input_layer <- layer_input(shape = c(original_dim))
 
 # Definición de la capa codificadora
-encoded_layer<- layer_dense(input_layer,encoding_dim , activation = "relu")
+encoded_layer<- layer_dense(input_layer,c(original_dim) , activation = "relu")
 
 # Se crea la parte codificadora
 encoder_model <- keras_model(input_layer, encoded_layer)
@@ -135,3 +135,4 @@ encoder_model %>% fit (x_train_matrix,x_train_matrix,
                      batch_size=256,
                      shuffle=TRUE,
                      validation_data= list(x_test_matrix,x_test_matrix))
+plot(encoder_model)
