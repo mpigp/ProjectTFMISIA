@@ -3,6 +3,7 @@ library("keras", lib.loc="~/R/win-library/3.4")
 library("tensorflow", lib.loc="~/R/win-library/3.4")
 
 
+
 # Definición de los parámetros comunes --------------------------------------------------------------
 # la "L" se pone para que sea de tipo Integer
 batch_size <- 256L
